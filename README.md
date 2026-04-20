@@ -9,7 +9,7 @@ rok i semestr: 2026 semestr IV grupa 1
 ## Dokumentacja główna
 Wszystkie wymagane elementy sprawozdania (punkty 0-10) znajdują się w poniższym pliku:
 
-        📄 KLIKNIJ TUTAJ, ABY OTWORZYĆ PEŁNE SPRAWOZDANIE (PDF)
+         KLIKNIJ TUTAJ, ABY OTWORZYĆ PEŁNE SPRAWOZDANIE (PDF)
         
 ## Struktura plików (Dodatek A)
 - `/sprawozdanie` - wersja PDF oraz [wersja edytowalna](link do dodania).
