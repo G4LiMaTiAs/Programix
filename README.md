@@ -12,8 +12,8 @@ Wszystkie wymagane elementy sprawozdania (punkty 0-10) znajdują się w poniższ
 [KLIKNIJ TUTAJ, ABY OTWORZYĆ PEŁNE SPRAWOZDANIE (PDF)](./sprawozdanie/Sprawozdanie_Finalne.pdf)
 
 ## Struktura plików (Dodatek A)
-- `/sprawozdanie` - wersja PDF oraz [wersja edytowalna](link do dodania).
-- `/diagramy` - źródła diagramów (UML).
-- `/interfejs` - makiety UI.
+* [**/sprawozdanie**](./sprawozdanie) - wersja PDF oraz [**wersja edytowalna**](./sprawozdanie/edytowalne).
+* [**/diagramy**](./diagramy) - źródła diagramów (UML).
+* [**/interfejs**](./interfejs) - makiety UI.
 
    
