@@ -7,19 +7,29 @@
 * rok i semestr: 2 rok (semestr IV)
 * grupa: 1
 * temat:
-* ** System GiftFlow służy do pełnej automatyzacji i cyfryzacji łańcucha dostaw operacji wigilijnej.
+* 1. Treść zadania projektowego 
+Moduł Zarządzania Beneficjentami i Korespondencją
+System GiftFlow służy do obsługi rocznego cyklu dystrybucji prezentów. Podstawowym podmiotem jest Beneficjent (posiadający unikalne ID, imię, nazwisko, wiek oraz dokładny adres z koordynatami GPS). Każdy Beneficjent może przesłać w danym roku dokładnie jeden List. List rejestrowany jest w systemie przez Elfa-Listonosza i zawiera listę życzeń oraz datę wpływu. Po rejestracji, system przesyła zapytanie do zewnętrznego systemu Grzecznościometr, który na podstawie danych behawioralnych zwraca Współczynnik Grzeczności (liczba 0-100).
 
-Moduł Beneficjentów i Weryfikacji
-Każdy Beneficjent (posiadający unikalny ID, adres i współrzędne GPS) może przesłać w danym roku jeden List. System przesyła dane z Listu do zewnętrznego modułu Grzecznościometr, który zwraca ocenę punktową. Na tej podstawie system automatycznie nadaje Listowi status: „Zatwierdzony” (dla dzieci grzecznych) lub „Odrzucony” (skutkujący wygenerowaniem zlecenia na dostawę węgla). Tylko zatwierdzone listy stają się podstawą do utworzenia Zlecenia Produkcyjnego.
+Jeśli współczynnik jest mniejszy niż 50, List automatycznie otrzymuje status „Odrzucony”, co skutkuje utworzeniem zlecenia na Węgiel.
 
-Moduł Produkcji i Magazynu
-Zlecenie Produkcyjne trafia do jednego z Warsztatów, gdzie przypisana jest do niego brygada Elfów. Aby rozpocząć pracę, system sprawdza dostępność i rezerwuje w Magazynie odpowiednie Surowce (określone przez typ i ilość). Produktem końcowym jest Prezent, który posiada przypisaną kategorię, wagę oraz wymiary. Każdy Prezent przed wysyłką musi przejść kontrolę jakości i otrzymać status „Gotowy”.
+Jeśli współczynnik wynosi 50 lub więcej, List otrzymuje status „Zatwierdzony”, co inicjuje proces produkcji zabawek z listy życzeń.
 
-Moduł Logistyki i Transportu
-Gotowe Prezenty są grupowane w Ładunki i przypisywane do Sani. Sanie mają zdefiniowane limity techniczne: maksymalną wagę ładunku oraz maksymalną objętość. System odpowiada za takie rozmieszczenie prezentów, aby zachować stabilność sani. Trasa przelotu jest generowana jako sekwencja punktów dostaw z przypisanym czasem dotarcia i strefą czasową. Podczas lotu system koryguje parametry trasy na podstawie danych z modułów GPS oraz Pogodynka.
+Moduł Produkcji i Gospodarki Magazynowej
+Zatwierdzony List generuje jedno lub więcej Zleceń Produkcyjnych. Każde Zlecenie przypisane jest do konkretnego Warsztatu (nazwa, lokalizacja). W Warsztacie pracuje Brygada Elfów – każdy Elf ma określoną specjalizację (np. stolarz, elektronik) i przypisany jest do jednego Warsztatu. Aby zrealizować Zlecenie, system musi zarezerwować i pobrać z Magazynu odpowiednie Surowce. Surowiec opisany jest przez nazwę, typ oraz aktualny stan magazynowy. Wynikiem pracy jest Prezent, który posiada unikalny kod QR, wagę, wymiary (szerokość, wysokość, głębokość) oraz status (np. „W produkcji”, „Gotowy”, „Spakowany”). Każdy Prezent przechodzi obowiązkową Kontrolę Jakości wykonywaną przez Elfa-Inspektora.
 
-Administracja i Raportowanie
-Po zakończeniu dostaw (26 grudnia), system archiwizuje dane o zrealizowanych prezentach i trasach. Na żądanie administratora generowany jest Raport Wydajności, który zestawia czas pracy poszczególnych warsztatów oraz całkowite zużycie surowców z magazynu.
+Moduł Logistyki, Załadunku i Transportu
+Gotowe Prezenty grupowane są w Ładunki przypisane do konkretnego sektora geograficznego. Każdy Ładunek przypisany jest do Sani (unikalny numer rejestracyjny). Sanie mają określony techniczny limit Ładowności (kg) oraz Pojemności (m³). System posiada funkcję Balansowania, która rozmieszcza Prezenty w Saniach tak, aby środek masy był optymalny (blokada startu przy przeciążeniu).
+Mikołaj (Główny Użytkownik) korzysta z modułu Nawigatora, który generuje Trasę jako listę Punktów Dostawy. Punkt Dostawy zawiera dane Beneficjenta i przewidywaną godzinę dotarcia (ETA). System w czasie rzeczywistym koryguje Trasę, pobierając dane z zewnętrznych modułów: GPS (aktualna pozycja) oraz Pogodynka (prędkość wiatru i opady).
+
+Moduł Archiwizacji i Raportowania
+Po dostarczeniu prezentu, Mikołaj oznacza go w systemie jako „Dostarczony”. 26 grudnia system automatycznie przenosi wszystkie dane z danego roku do Archiwum. Administrator systemu może wygenerować Raport Końcowy, który zawiera:
+
+Zestawienie wydajności Warsztatów (liczba zrealizowanych zleceń).
+
+Bilans zużycia Surowców.
+
+Statystykę średniego czasu dostawy prezentu od momentu zatwierdzenia Listu.
 
 [KLIKNIJ TUTAJ, ABY OTWORZYĆ PEŁNE SPRAWOZDANIE (PDF)](./sprawozdanie/Sprawozdanie_Finalne.pdf)
 
