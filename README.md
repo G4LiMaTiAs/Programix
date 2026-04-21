@@ -7,7 +7,7 @@
 * rok i semestr: 2 rok (semestr IV)
 * grupa: 1
 * temat:
-* 1. Treść zadania projektowego 
+Treść zadania projektowego 
 Moduł Zarządzania Beneficjentami i Korespondencją
 System GiftFlow służy do obsługi rocznego cyklu dystrybucji prezentów. Podstawowym podmiotem jest Beneficjent (posiadający unikalne ID, imię, nazwisko, wiek oraz dokładny adres z koordynatami GPS). Każdy Beneficjent może przesłać w danym roku dokładnie jeden List. List rejestrowany jest w systemie przez Elfa-Listonosza i zawiera listę życzeń oraz datę wpływu. Po rejestracji, system przesyła zapytanie do zewnętrznego systemu Grzecznościometr, który na podstawie danych behawioralnych zwraca Współczynnik Grzeczności (liczba 0-100).
 
