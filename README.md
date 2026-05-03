@@ -10,8 +10,6 @@ Projekt platformy do zarządzania usługami internetowymi dla firmy światłowod
 
 
 
-\*(uzupełnić)\*
-
 \- Lisowski Mateusz
 
 \- Berdii Andrii
